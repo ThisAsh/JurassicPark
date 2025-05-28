@@ -8,7 +8,7 @@ public class Plesiosauro extends Dinosauro{
     }
 
     @Override
-    void infoSpecie()
+    public void infoSpecie()
     {
         //chi sei ?
     }

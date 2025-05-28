@@ -10,8 +10,14 @@ public class Pterodattilo extends Dinosauro{
         this.aperturaAlare = aperturaAlare;
     }
 
+    public Pterodattilo() 
+    {
+        this.setSpecie("Pterodattilo");
+        this.setDieta("onnivoro");
+    }
+
     @Override
-    void infoSpecie()
+    public void infoSpecie()
     {
         //chi sei ?
     }
