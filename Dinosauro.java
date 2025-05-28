@@ -1,12 +1,16 @@
+/**
+ * Contiene gli attributi di un dinosauro generico, un costruttore con gli attributi di default
+ * 
+ */
 public abstract class Dinosauro
 {
     //attributi
-    String nome;
-    int età;
-    String specie;
-    String stato;
-    String dimensione;
-    String dieta;
+    private String nome;
+    private int età;
+    private String specie;
+    private String stato;
+    private String dimensione;
+    private String dieta;
 
     //costruttore
     public Dinosauro()
@@ -29,6 +33,9 @@ public abstract class Dinosauro
     String getStato(){return this.stato;}
     String getDimensione(){return this.dimensione;}
     String getDieta(){return this.dieta;}
+
+    //metodi setter
+    public void setStato(String stato) {this.stato = stato;}
 
     //metodi
     public void printInfo()
