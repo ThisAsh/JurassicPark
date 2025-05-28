@@ -17,7 +17,7 @@ public abstract class Dinosauro
         this.specie = "non dato";
         this.stato = "non dato";
         this.dimensione = "non dato";
-        this.dieta = "non dato";
+        this.dieta = "non dato"; 
     }
 
     void printinfo()
