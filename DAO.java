@@ -1,14 +1,14 @@
-public interface DAO{
+
+
+public interface DAO<A>{
     //metodi astratti che verranno implementati da un altra classe
 
-    Dinosauro trova(String nome); //read
+    A trova(String nome); //read
 
     void nutri(); //update
 
     void cura(); //update
 
-    void vendi(Dinosauro dinoDaVendere); //delete
-
-    void printInfo();
+    void vendi(A animaleDaVendere); //delete
 
 }

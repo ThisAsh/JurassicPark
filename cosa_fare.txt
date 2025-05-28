@@ -1,9 +1,13 @@
-dinosauro classe astratta (meglio di interfaceperchè può contenere attributi non astratti, e a noi serve dichiarali perchè tutti i dinosauri devono averli)
+dinosauro classe astratta (meglio di interface perchè può contenere attributi non astratti, e a noi serve dichiarali perchè tutti i dinosauri devono averli)
 gli habitat possono essere interfacce perchè influenzano il resto dei comportamenti del dinosauro (es. un dinosauro terrestre non userà il metodo fish() per cibarsi )
 le interfacce posso essere implementate sulle sottoclassi di una classe astratta,
 basta mettere una , in mezzo se implementi più di un'interfaccia
 (gli attributi della superclasse vengono usati se la sottoclasse non fa override)
 (Java usa unicode per stampare)
 usiamo un interfaccia DAO per accedere ai dati dentro la classe dinosauro con classiche operazioni CRUD (Create, Read, Update, Delete)
-usiamo i DAO per tenere i comportamenti dei dinosauri separati dai dati
-la nostra classe di dominio è dinosauro. 
+usiamo i DAO per tenere i comportamenti dei dinosauri separati dai dati.
+la nostra classe di dominio è dinosauro.
+Nella classe Dao operiamo con oggetti astratti del tipo A (Animali).
+Implementando il Dao nel caso specifico dei dinosauri la classe A viene concretizzata come classe Dinosauro.
+
+

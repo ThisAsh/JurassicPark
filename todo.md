@@ -6,4 +6,5 @@ todo:
 ___________________
 - finire classi
 - interfacce DAO per dinosauro 
-- commenti
+- aggiornare consegna
+- uml
