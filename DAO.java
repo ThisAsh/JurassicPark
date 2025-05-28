@@ -1,6 +1,5 @@
-public interface DinosauroDAO{
+public interface DAO{
     //metodi astratti che verranno implementati da un altra classe
-    void crea(Dinosauro dino); //create
 
     Dinosauro trova(String nome); //read
 
@@ -9,5 +8,7 @@ public interface DinosauroDAO{
     void cura(); //update
 
     void vendi(Dinosauro dinoDaVendere); //delete
+
+    void printInfo();
 
 }

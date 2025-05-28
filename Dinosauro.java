@@ -8,7 +8,7 @@ public abstract class Dinosauro
     String dimensione;
     String dieta;
 
-    //metodi
+    //costruttore
     public Dinosauro()
     {
         //attributi di default in caso non vengano dati alla creazione dell'istanza
@@ -20,15 +20,7 @@ public abstract class Dinosauro
         this.dieta = "non dato"; 
     }
 
-    void printinfo()
-    {
-        System.out.println("Nome: "+this.nome);
-        System.out.println("Età: "+this.età); //todo: capire come stampare à
-        System.out.println("Specie: "+this.specie);
-        System.out.println("Stato: "+this.stato);
-        System.out.println("Dimensione: "+this.dimensione);
-        System.out.println("Dieta: "+this.dieta);
-    }
+    
 
     //metodi getter
     String getNome(){return this.nome;}
@@ -38,7 +30,17 @@ public abstract class Dinosauro
     String getDimensione(){return this.dimensione;}
     String getDieta(){return this.dieta;}
 
+    //metodi
+    public void printInfo()
+    {
+        System.out.println("Nome: "+this.nome);
+        System.out.println("Età: "+this.età); //todo: capire come stampare à
+        System.out.println("Specie: "+this.specie);
+        System.out.println("Stato: "+this.stato);
+        System.out.println("Dimensione: "+this.dimensione);
+        System.out.println("Dieta: "+this.dieta);
+    }
+
     //metodi astratti
     abstract void infoSpecie();
-
 }
