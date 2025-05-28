@@ -4,7 +4,5 @@ todo:
 - Pubblicazione materiale su github (codice)
 - consegna (markdown) e svolgimento (markdown) (wml)
 ___________________
-- finire classi
-- interfacce DAO per dinosauro 
-- aggiornare consegna
+- finire main e menu
 - uml

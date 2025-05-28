@@ -5,9 +5,9 @@ public interface DAO<A>{
 
     A trova(String nome); //read
 
-    void nutri(); //update
+    void nutri(A animaleDaNutrire); //update
 
-    void cura(); //update
+    void cura(A animaleDaCurare); //update
 
     void vendi(A animaleDaVendere); //delete
 
