@@ -8,7 +8,7 @@ public class Tirannosauro extends Dinosauro implements Terrestre{
     }
 
     @Override
-    void descriviRazza(){
+    void infoSpecie(){
         //bla bla bla
     }
 

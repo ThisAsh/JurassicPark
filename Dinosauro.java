@@ -40,6 +40,6 @@ public abstract class Dinosauro
 
     //metodi astratti
     abstract void feed();
-    abstract void descriviRazza();
+    abstract void infoSpecie();
 
 }

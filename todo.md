@@ -5,4 +5,5 @@ todo:
 - consegna (markdown) e svolgimento (markdown) (wml)
 ___________________
 - finire classi
+- interfacce DAO per dinosauro 
 - commenti

@@ -1,4 +1,4 @@
-public class Pterodattilo {
+public class Pterodattilo extends Dinosauro{
 
     private int aperturaAlare;
 
@@ -9,8 +9,8 @@ public class Pterodattilo {
         this.aperturaAlare = aperturaAlare;
     }
 
-       @Override
-    void descriviRazza()
+    @Override
+    void infoSpecie()
     {
         //chi sei ?
     }

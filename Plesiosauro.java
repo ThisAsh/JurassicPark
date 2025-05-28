@@ -1,16 +1,13 @@
-public class Plesiosauro extends Dinosauro{
-
-    private double dimensione;
+public class Plesiosauro extends Dinosauro implements Acquatico{
 
     // Costruttore
     public Plesiosauro(double dimensione) 
     {
         this.specie = "Plesiosauro";
-        this.dimensione = dimensione;
     }
 
-       @Override
-    void descriviRazza()
+    @Override
+    void infoSpecie()
     {
         //chi sei ?
     }
@@ -19,5 +16,11 @@ public class Plesiosauro extends Dinosauro{
     void feed() 
     {
         //mangia bastardo
+    }
+
+    @Override
+    void fish(){
+        System.out.println(this.nome + " sta insegueno dei pesci");
+        return;
     }
 }
