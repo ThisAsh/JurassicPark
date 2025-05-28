@@ -1,4 +1,4 @@
-public class Tirannosauro extends Dinosauro implements Terrestre{
+public class Tirannosauro extends Dinosauro{
 
 
     //costruttore
@@ -9,12 +9,7 @@ public class Tirannosauro extends Dinosauro implements Terrestre{
 
     @Override
     void infoSpecie(){
-        //bla bla bla
-    }
-
-    @Override
-    void feed() {
-        //roba roba
+        System.out.println("Tyrannosaurus rex o T-Rex, è un genere estinto di dinosauro teropode tirannosauride vissuto nel Cretaceo superiore");
     }
     
 }

@@ -4,4 +4,6 @@ le interfacce posso essere implementate sulle sottoclassi di una classe astratta
 basta mettere una , in mezzo se implementi più di un'interfaccia
 (gli attributi della superclasse vengono usati se la sottoclasse non fa override)
 (Java usa unicode per stampare)
-usiamo delle interfacce DAO per accedere ai dati dentro la classe dinosauro
+usiamo un interfaccia DAO per accedere ai dati dentro la classe dinosauro con classiche operazioni CRUD (Create, Read, Update, Delete)
+usiamo i DAO per tenere i comportamenti dei dinosauri separati dai dati
+la nostra classe di dominio è dinosauro. 

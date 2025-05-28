@@ -1,4 +1,4 @@
-public class Plesiosauro extends Dinosauro implements Acquatico{
+public class Plesiosauro extends Dinosauro{
 
     // Costruttore
     public Plesiosauro(double dimensione) 
@@ -12,15 +12,4 @@ public class Plesiosauro extends Dinosauro implements Acquatico{
         //chi sei ?
     }
 
-    @Override
-    void feed() 
-    {
-        //mangia bastardo
-    }
-
-    @Override
-    void fish(){
-        System.out.println(this.nome + " sta insegueno dei pesci");
-        return;
-    }
 }

@@ -1,9 +1,9 @@
 public class Pterodattilo extends Dinosauro{
 
-    private int aperturaAlare;
+    private double aperturaAlare;
 
     // Costruttore
-    public Pterodattilo(int aperturaAlare) 
+    public Pterodattilo(double aperturaAlare) 
     {
         this.specie = "Pterodattilo";
         this.aperturaAlare = aperturaAlare;
@@ -15,9 +15,4 @@ public class Pterodattilo extends Dinosauro{
         //chi sei ?
     }
 
-    @Override
-    void feed() 
-    {
-        //mangia bastardo
-    }
 }

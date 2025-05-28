@@ -39,7 +39,6 @@ public abstract class Dinosauro
     String getDieta(){return this.dieta;}
 
     //metodi astratti
-    abstract void feed();
     abstract void infoSpecie();
 
 }
