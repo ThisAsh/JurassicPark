@@ -1,0 +1,7 @@
+Creare una serie di classi per gestire i dinosauri a Jurassic Park.
+La classe main dovrà contenere un vettore contente tutti i recinti.
+Ci possono essere più dinosauri di ogni specie, ogni specie ha una sua dimensione(piccola, media, grande), una sua dieta (erbivoro, carnivoro, onnivoro).
+Ogni dinosauro nel parco ha associate ad esso le seguenti informazioni: specie, nome, età, stato(salute).
+
+
+Aggiungere classe di test.
