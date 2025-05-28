@@ -1,5 +1,6 @@
 /**
- * Contiene gli attributi di un dinosauro generico, un costruttore con gli attributi di default
+ * Contiene gli attributi di un dinosauro generico, un costruttore con gli attributi di default, vari metodi getter e setter 
+ * e un metodo astratto per stampare le informazioni relative alla specie.
  * 
  */
 public abstract class Dinosauro
@@ -36,6 +37,8 @@ public abstract class Dinosauro
 
     //metodi setter
     public void setStato(String stato) {this.stato = stato;}
+    public void setSpecie(String specie) {this.specie = specie;}
+    public void setDieta(String dieta) {this.dieta = dieta;}
 
     //metodi
     public void printInfo()

@@ -1,4 +1,7 @@
-
+/**
+ * Classe Dao (Data Access Object) generica per la gestione
+ * di un gruppo di animali.
+ */
 
 public interface DAO<A>{
     //metodi astratti che verranno implementati da un altra classe

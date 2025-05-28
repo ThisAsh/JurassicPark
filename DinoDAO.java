@@ -1,3 +1,7 @@
+/**
+ * Classe che implementa un Dao (Data Access Object) generico 
+ * e lo applica alla situazione specifica del parco di dinosauri.
+ */
 
 import java.util.*;
 

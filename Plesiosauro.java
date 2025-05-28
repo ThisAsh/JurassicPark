@@ -3,7 +3,8 @@ public class Plesiosauro extends Dinosauro{
     // Costruttore
     public Plesiosauro(double dimensione) 
     {
-        this.specie = "Plesiosauro";
+        this.setSpecie("Plesiosauro");
+        this.setDieta("piscivoro");
     }
 
     @Override

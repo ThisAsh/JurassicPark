@@ -3,8 +3,8 @@ public class Tirannosauro extends Dinosauro{
 
     //costruttore
     public Tirannosauro(){
-        this.specie = "Tirannosaurus Rex";
-        this.dieta = "carnivoro";
+        this.setSpecie("Tirannosaurus Rex");
+        this.setDieta("carnivoro");
     }
 
     @Override

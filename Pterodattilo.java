@@ -5,7 +5,8 @@ public class Pterodattilo extends Dinosauro{
     // Costruttore
     public Pterodattilo(double aperturaAlare) 
     {
-        this.specie = "Pterodattilo";
+        this.setSpecie("Pterodattilo");
+        this.setDieta("onnivoro");
         this.aperturaAlare = aperturaAlare;
     }
 
