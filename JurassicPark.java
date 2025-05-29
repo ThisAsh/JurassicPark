@@ -71,7 +71,6 @@ public class JurassicPark {
                     Dinosauro daNutrire = dao.trova(nomeDaNutrire);
                     if (daNutrire != null) {
                         dao.nutri(daNutrire);
-                        System.out.println("Il dinosauro è stato nutrito.");
                     }
                     break;
 
@@ -81,7 +80,6 @@ public class JurassicPark {
                     Dinosauro daCurare = dao.trova(nomeDaCurare);
                     if (daCurare != null) {
                         dao.nutri(daCurare);
-                        System.out.println("Il dinosauro è stato curato.");
                     }
                     break;
 

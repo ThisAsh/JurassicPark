@@ -10,6 +10,7 @@ public class Tirannosauro extends Dinosauro{
         this.setSpecie("Tirannosaurus Rex");
         this.setDieta("carnivoro");
         this.setNome(nome);
+        this.setStato("affamato");
     }
 
     @Override
