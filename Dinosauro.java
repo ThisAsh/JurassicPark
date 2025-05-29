@@ -39,6 +39,7 @@ public abstract class Dinosauro
     public void setStato(String stato) {this.stato = stato;}
     public void setSpecie(String specie) {this.specie = specie;}
     public void setDieta(String dieta) {this.dieta = dieta;}
+    public void setNome(String nome) {this.nome = nome;}
 
     //metodi
     public void printInfo()
@@ -53,4 +54,6 @@ public abstract class Dinosauro
 
     //metodi astratti
     abstract void infoSpecie();
+
+    
 }

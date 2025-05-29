@@ -51,4 +51,7 @@ public class DinoDAO implements DAO<Dinosauro>{
         dinosauri.add(dinoDaAggiungere);
     }
 
+    //getter
+    public List<Dinosauro> getDinosauri() {return dinosauri;}
+
 }

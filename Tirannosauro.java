@@ -6,6 +6,12 @@ public class Tirannosauro extends Dinosauro{
         this.setDieta("carnivoro");
     }
 
+    public Tirannosauro(String nome){
+        this.setSpecie("Tirannosaurus Rex");
+        this.setDieta("carnivoro");
+        this.setNome(nome);
+    }
+
     @Override
     public void infoSpecie(){
         System.out.println("Tyrannosaurus rex o T-Rex, è un genere estinto di dinosauro teropode tirannosauride vissuto nel Cretaceo superiore");

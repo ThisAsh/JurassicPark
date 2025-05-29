@@ -7,6 +7,13 @@ public class Plesiosauro extends Dinosauro{
         this.setDieta("piscivoro");
     }
 
+    public Plesiosauro(String nome) 
+    {
+        this.setSpecie("Plesiosauro");
+        this.setDieta("piscivoro");
+        this.setNome(nome);
+    }
+
     @Override
     public void infoSpecie()
     {

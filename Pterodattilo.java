@@ -9,6 +9,13 @@ public class Pterodattilo extends Dinosauro{
         this.setDieta("onnivoro");
     }
 
+    public Pterodattilo(String nome) 
+    {
+        this.setSpecie("Pterodattilo");
+        this.setDieta("onnivoro");
+        this.setNome(nome);
+    }
+
     @Override
     public void infoSpecie()
     {

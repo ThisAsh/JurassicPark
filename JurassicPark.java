@@ -5,10 +5,10 @@
 import java.util.Scanner;
 
 public class JurassicPark {
-    Scanner scanner = new Scanner(System.in);
-    DinoDAO dao = new DinoDAO();  // Usa la classe DAO
+    
     public static void main(String[] args) {
-        
+        Scanner scanner = new Scanner(System.in);
+        DinoDAO dao = new DinoDAO();  // Usa la classe DAO
         int scelta;
         String nome;
 
@@ -20,86 +20,109 @@ public class JurassicPark {
             System.out.println("3. Nutri un dinosauro");
             System.out.println("4. Cura un dinosauro");
             System.out.println("5. Visualizza tutti i dinosauri");
-            System.out.println("6. Rimuovi un dinosauro");
-            System.out.println("7. Visualizza tutti i dinosauri");
+            System.out.println("6. Visualizza le informazioni di una specie");
+            System.out.println("7. Rimuovi un dinosauro");
+            System.out.println("8. Esci");
             System.out.print("Scelta: ");
             
             scelta = scanner.nextInt();
             scanner.nextLine(); // consuma newline
 
             switch (scelta) {
+
                 case 1: //aggungi dino
-                    System.out.println("Che tipo di dinosauro vuoi aggiungere \n1) T-rex \n2)Pterodattilo \n3)Plesiosauro");
+                    System.out.println("Che tipo di dinosauro vuoi aggiungere? \n1) T-rex \n2)Pterodattilo \n3)Plesiosauro");
                     String sceltaRazza = scanner.nextLine();
                     if (sceltaRazza.equals("1")) {
                         System.out.print("Nome del T-rex: ");
                         String nomeTrex = scanner.nextLine();
-                        Dinosauro nuovo = new Tirannosauro(nomeTrex);
+                        Tirannosauro nuovo = new Tirannosauro(nomeTrex);
+                        dao.aggiungi(nuovo);
                     } else if (sceltaRazza.equals("2")) {
-                        System.out.print("Nome del Pterodattilo: ");
+                        System.out.print("Nome dello Pterodattilo: ");
                         String nomePtero = scanner.nextLine();
-                        Dinosauro nuovo = new Pterodattilo(nomePtero);
+                        Pterodattilo nuovo = new Pterodattilo(nomePtero);
+                        dao.aggiungi(nuovo);
                     } else if (sceltaRazza.equals("3")) {
                         System.out.print("Nome del Plesiosauro: ");
                         String nomePlesio = scanner.nextLine();
-                        Dinosauro nuovo = new Plesiosauro(nomePlesio);
+                        Plesiosauro nuovo = new Plesiosauro(nomePlesio);
+                        dao.aggiungi(nuovo);
                     } else {
                         System.out.println("Scelta non valida.");
                         continue;
                     }
-                    dao.dinosauri.add(nuovo);
+                    
                     System.out.println("Dinosauro aggiunto.");
                     break;
+
                 case 2: //trova dino da nome
                     System.out.print("Nome da cercare: ");
                     nome = scanner.nextLine();
                     Dinosauro trovato = dao.trova(nome);
                     if (trovato != null) {
-                        System.out.println("Trovato: " + trovato.nome + ", Stato: " + trovato.stato);
+                        System.out.println("Trovato: " + trovato.getNome() + ", Stato: " + trovato.getStato());
                     }
                     break;
+
                 case 3:
                     System.out.print("Nome del dinosauro da nutrire: ");
                     String nomeDaNutrire = scanner.nextLine();
-                    Dinosauro daNutrire = dao.trova(nome);
+                    Dinosauro daNutrire = dao.trova(nomeDaNutrire);
                     if (daNutrire != null) {
                         dao.nutri(daNutrire);
                         System.out.println("Il dinosauro è stato nutrito.");
                     }
                     break;
+
                 case 4:
+                    System.out.print("Nome del dinosauro da curare: ");
+                    String nomeDaCurare = scanner.nextLine();
+                    Dinosauro daCurare = dao.trova(nomeDaCurare);
+                    if (daCurare != null) {
+                        dao.nutri(daCurare);
+                        System.out.println("Il dinosauro è stato curato.");
+                    }
+                    break;
+
+                case 5:
                     System.out.println("Visualizza tutti i dinosauri:");
-                    for (Dinosauro dino : dao.dinosauri) {
-                        System.out.println(dino.nome);
-                        System.out.println("Specie: " + dino.specie);
-                        System.out.println("Stato: " + dino.stato); 
-                        System.out.println("Dimensione: " + dino.dimensione);
-                        System.out.println("Dieta: " + dino.dieta);
-                        dino.printinfo();
-                        dino.infoRazza();
+                    for (Dinosauro dino : dao.getDinosauri()) {
+                        dino.printInfo();
                         System.out.println("-------------------------");
                     }
                     break;
-                case 5:
+
+                case 6:
+                    System.out.println("Visualizza i dati delle specie presenti nel parco");
+                    for (Dinosauro dino : dao.getDinosauri()) {
+                        dino.infoSpecie();
+                        System.out.println("-------------------------");
+                    }
+
+                    break;
+
+                case 7:
                     System.out.println("Rimuovere un dinosauro");
                     System.out.print("Nome del dinosauro da rimuovere: ");
                     String nomeDaRimuovere = scanner.nextLine();
                     Dinosauro daRimuovere = dao.trova(nomeDaRimuovere);
                     if (daRimuovere != null) {
-                        dao.rimuovi(daRimuovere);
+                        dao.vendi(daRimuovere);
                         System.out.println("Dinosauro rimosso.");
                     } else {
                         System.out.println("Dinosauro non trovato.");
                     }
                     break;
-                case 6:
-                    System.out.println("Chiusura...");
+
                 default:
                     System.out.println("Scelta non valida.");
             }
 
-        } while (scelta != 5);
+        } while (scelta != 8);
 
+        System.out.println("Chiusura...");
         scanner.close();
+        System.exit(0);
     }
 }
