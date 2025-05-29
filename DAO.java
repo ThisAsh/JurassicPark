@@ -14,4 +14,6 @@ public interface DAO<A>{
 
     void vendi(A animaleDaVendere); //delete
 
+    void aggiungi(A animaleDaAggiungere); //create
+
 }

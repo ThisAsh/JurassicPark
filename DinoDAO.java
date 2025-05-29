@@ -13,7 +13,7 @@ public class DinoDAO implements DAO<Dinosauro>{
     public Dinosauro trova(String nome){
         for (int i = 0; i < dinosauri.size(); i++) {
             Dinosauro dino = dinosauri.get(i);
-            if (dino.getNome() == nome) {
+            if (dino.getNome().equals(nome)) {
                 return dino;
             }
         }
@@ -23,30 +23,32 @@ public class DinoDAO implements DAO<Dinosauro>{
 
     @Override
     public void nutri(Dinosauro dinoDaNutrire){
-        if (dinoDaNutrire.getStato() == "affamato") {
+        if (dinoDaNutrire.getStato().equals("affamato")) {
             System.out.println(dinoDaNutrire.getNome() +" si sta cibando");
             dinoDaNutrire.setStato("normale");
         } else{
             System.out.println("Il dinosauro non è affamato");
         }
-        return;
     }
 
     @Override
     public void cura(Dinosauro dinoDaCurare){
-        if (dinoDaCurare.getStato() == "ammalato") {
+        if (dinoDaCurare.getStato().equals("ammalato")) {
             System.out.println(dinoDaCurare.getNome() +" sta venendo curato");
             dinoDaCurare.setStato("normale");
         } else{
             System.out.println("Il dinosauro non ha bisogno di essere curato");
         }
-        return;
     }
 
     @Override
     public void vendi(Dinosauro dinoDaVendere){
         dinosauri.remove(dinoDaVendere);
-        return;
+    }
+
+    @Override
+    public void aggiungi(Dinosauro dinoDaAggiungere){
+        dinosauri.add(dinoDaAggiungere);
     }
 
 }

@@ -1,25 +1,34 @@
+/**
+ * classe main 
+ */
+
 import java.util.Scanner;
 
 public class JurassicPark {
+    Scanner scanner = new Scanner(System.in);
+    DinoDAO dao = new DinoDAO();  // Usa la classe DAO
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        DinoDAO dao = new DinoDAO();  // Usa la classe DAO
-
+        
         int scelta;
         String nome;
 
         do {
+
             System.out.println("Menu:");
             System.out.println("1. Aggiungi un dinosauro");
             System.out.println("2. Trova un dinosauro tramite nome");
             System.out.println("3. Nutri un dinosauro");
-            System.out.println("4. Esci");
+            System.out.println("4. Cura un dinosauro");
+            System.out.println("5. Visualizza tutti i dinosauri");
+            System.out.println("6. Rimuovi un dinosauro");
+            System.out.println("7. Visualizza tutti i dinosauri");
             System.out.print("Scelta: ");
+            
             scelta = scanner.nextInt();
             scanner.nextLine(); // consuma newline
 
             switch (scelta) {
-                case 1:
+                case 1: //aggungi dino
                     System.out.println("Che tipo di dinosauro vuoi aggiungere \n1) T-rex \n2)Pterodattilo \n3)Plesiosauro");
                     String sceltaRazza = scanner.nextLine();
                     if (sceltaRazza.equals("1")) {
@@ -41,7 +50,7 @@ public class JurassicPark {
                     dao.dinosauri.add(nuovo);
                     System.out.println("Dinosauro aggiunto.");
                     break;
-                case 2:
+                case 2: //trova dino da nome
                     System.out.print("Nome da cercare: ");
                     nome = scanner.nextLine();
                     Dinosauro trovato = dao.trova(nome);

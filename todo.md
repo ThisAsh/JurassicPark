@@ -5,4 +5,4 @@ todo:
 - consegna (markdown) e svolgimento (markdown) (wml)
 ___________________
 - finire main e menu
-- uml
+- infoSpecie
